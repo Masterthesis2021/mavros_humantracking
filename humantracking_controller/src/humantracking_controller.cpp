@@ -20,7 +20,7 @@ HumanTrackingCtrl::HumanTrackingCtrl(const ros::NodeHandle& nh, const ros::NodeH
   mav_pose_sub_ = nh_.subscribe("mavros/local_position/pose", 1, &HumanTrackingCtrl::mavposeCallback, this,
                                 ros::TransportHints().tcpNoDelay());
   gimbal_pitch_ = 0.0;
-  tracking_pos_ << 0.0, 0.0, 0.0;
+  tracking_pos_ << 10.0, 10.0, 0.0;
 }
 HumanTrackingCtrl::~HumanTrackingCtrl() {
   // Destructor
